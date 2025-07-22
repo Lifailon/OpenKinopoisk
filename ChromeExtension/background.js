@@ -27,7 +27,7 @@ chrome.runtime.onInstalled.addListener(function() {
             chrome.storage.local.set({ 'TorApiServer': 'https://torapi.vercel.app' })
         }
         if (typeof data.KinoboxCheckBox === 'undefined') {
-            chrome.storage.local.set({ 'KinoboxCheckBox': true })
+            chrome.storage.local.set({ 'KinoboxCheckBox': false })
         }
         if (typeof data.TrailerCheckBox === 'undefined') {
             chrome.storage.local.set({ 'TrailerCheckBox': true })
@@ -226,7 +226,7 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
             url = `https://themoviedb.org/search?query=${query}`
         }
         else if (clickData.menuItemId === "KinoboxSearch") {
-            url = `https://kinomix.web.app/?q=${query}`
+            url = `https://kinohost.web.app/search?query=${query}`
         }
         else if (clickData.menuItemId === "YouTubeSearch") {
             url = `https://youtube.com/results?search_query=${query}`

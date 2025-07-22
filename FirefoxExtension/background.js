@@ -226,7 +226,7 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
             url = `https://themoviedb.org/search?query=${query}`
         }
         else if (clickData.menuItemId === "KinoboxSearch") {
-            url = `https://kinomix.web.app/?q=${query}`
+            url = `https://kinohost.web.app/search?query=${query}`
         }
         else if (clickData.menuItemId === "YouTubeSearch") {
             url = `https://youtube.com/results?search_query=${query}`

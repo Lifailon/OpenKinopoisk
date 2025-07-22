@@ -98,8 +98,8 @@ homeButton.addEventListener('click', function() {
 
 // Забираем все CheckBox
 var MagnetCheckBox = document.getElementById('MagnetCheckBox')
-var darkModeBox = document.getElementById('darkModeBox')
 var SearchCheckBox = document.getElementById('SearchCheckBox')
+var darkModeBox = document.getElementById('darkModeBox')
 var KinoboxCheckBox = document.getElementById('KinoboxCheckBox')
 var TrailerCheckBox = document.getElementById('TrailerCheckBox')
 var YouTubeCheckBox = document.getElementById('YouTubeCheckBox')
@@ -116,13 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 document.addEventListener('DOMContentLoaded', function() {
-    chrome.storage.local.get('MagnetCheckBox', function(data) {
-        MagnetCheckBox.checked = data.MagnetCheckBox
+    chrome.storage.local.get('SearchCheckBox', function(data) {
+        SearchCheckBox.checked = data.SearchCheckBox
     })
 })
 document.addEventListener('DOMContentLoaded', function() {
-    chrome.storage.local.get('SearchCheckBox', function(data) {
-        SearchCheckBox.checked = data.SearchCheckBox
+    chrome.storage.local.get('MagnetCheckBox', function(data) {
+        MagnetCheckBox.checked = data.MagnetCheckBox
     })
 })
 document.addEventListener('DOMContentLoaded', function() {
@@ -170,11 +170,11 @@ document.addEventListener('DOMContentLoaded', function() {
 darkModeBox.addEventListener('change', function() {
     chrome.storage.local.set({ 'darkModeBox': this.checked })
 })
-MagnetCheckBox.addEventListener('change', function() {
-    chrome.storage.local.set({ 'MagnetCheckBox': this.checked })
-})
 SearchCheckBox.addEventListener('change', function() {
     chrome.storage.local.set({ 'SearchCheckBox': this.checked })
+})
+MagnetCheckBox.addEventListener('change', function() {
+    chrome.storage.local.set({ 'MagnetCheckBox': this.checked })
 })
 KinoboxCheckBox.addEventListener('change', function() {
     chrome.storage.local.set({ 'KinoboxCheckBox': this.checked })

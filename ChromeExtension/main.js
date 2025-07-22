@@ -407,7 +407,7 @@ const main = async function (url) {
             const KinoboxButton = newElementPadding({
                 tag: 'a',
                 id: 'Kinobox-Button',
-                href: `https://kinomix.web.app/#${kinopoiskID}`,
+                href: `https://kinohost.web.app/movie/${kinopoiskID}`,
                 content: 'Смотреть онлайн'
             })
             // Открывать ссылку в новой вкладке
@@ -423,9 +423,9 @@ const hd = async function (buttonBlock) {
     const filmName = document.querySelector("#__next > div.styles_root__S2643 > div.styles_body__XTb_o.main-view.with-transition > div > div > main > div.FilmContent_wrapper__EicQU > div > div > section > div > div.ContentWrapper_title__uVspG.ContentWrapper_title_compact__nO1AL > h1 > img").getAttribute('alt').replace('Смотреть','').trim().replace(/ /g,'+')
     let url = ''
     if (filmName) {
-        url = `https://kinomix.web.app/#${filmName}`
+        url = `https://kinohost.web.app/search?query=${filmName}`
     } else {
-        url = `https://kinomix.web.app`
+        url = `https://kinohost.web.app`
     }
     const KinoboxButton = newElementPadding({
         tag: 'a',
